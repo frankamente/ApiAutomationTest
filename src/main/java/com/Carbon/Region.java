@@ -43,6 +43,10 @@ public class Region {
         this.intensity = intensity;
     }
 
+    public int getIntensityForecast() {
+        return this.intensity.getForecast();
+    }
+
     public List<GenerationMix> getGenerationmix() {
         return generationmix;
     }

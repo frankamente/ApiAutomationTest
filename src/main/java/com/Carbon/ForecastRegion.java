@@ -1,6 +1,6 @@
 package com.Carbon;
 
-public class ForecastRegion implements Comparable<ForecastRegion>{
+public class ForecastRegion {
     private int forecast;
     private String shortName;
     public ForecastRegion(Region region) {
@@ -24,8 +24,4 @@ public class ForecastRegion implements Comparable<ForecastRegion>{
         this.shortName = shortName;
     }
 
-    @Override
-    public int compareTo(ForecastRegion o) {
-        return Integer.compare(o.forecast, this.forecast);
-    }
 }
