@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'api.automation.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.5'
+    testCompile 'junit:junit:4.12'
+    testCompile 'io.rest-assured:rest-assured:4.0.0'
+    testCompile 'io.rest-assured:json-schema-validator:4.0.0'
+    testCompile 'org.assertj:assertj-core:3.11.1'
+}
