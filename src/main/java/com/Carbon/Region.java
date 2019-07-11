@@ -51,6 +51,16 @@ public class Region {
         this.generationmix = generationmix;
     }
 
+    public double getGenerationMixSum() {
+        final double result = generationmix.stream().mapToDouble(GenerationMix::getPerc).sum();
+        return round(result);
+    }
+
+    private double round(double value) {
+        int scale = (int) Math.pow(10, DECIMAL_PRECISION);
+        return (double) Math.round(value * scale) / scale;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -24,6 +24,13 @@ public class ApiAutomationTest {
         printSortedRegions(forecastRegion);
     }
 
+    @Test
+    public void generationMixShouldSum100() {
+        final CarbonIntensity carbonIntensity = getCarbonIntensity();
+
+        assertThat(carbonIntensity.getRegions()).allMatch(x -> x.getGenerationMixSum() == 100);
+    }
+
     private CarbonIntensity getCarbonIntensity() {
         final CarbonIntensityResponse carbonIntensityResponse =
                 get(PATH)
